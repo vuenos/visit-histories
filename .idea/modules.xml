@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../histories-tabs.iml" filepath="$PROJECT_DIR$/../histories-tabs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/visit-histories.iml" filepath="$PROJECT_DIR$/.idea/visit-histories.iml" />
     </modules>
   </component>
 </project>
