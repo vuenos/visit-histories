@@ -1,30 +1,32 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+import {useNavigate} from 'react-router-dom';
+import {resetTabs} from '../store';
 
-function TabNavigation() {
-  const tabs = useSelector((state) => state.tabs.tabs);
-  const dispatch = useDispatch();
-  const history = useHistory();
+const Tabs = () => {
+    const tabs = useSelector((state) => state.app.tabs);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-  const handleTabClick = (path) => {
-    history.push(path);
-  };
+    const handleTabClick = (url) => {
+        navigate(url);
+    };
 
-  const handleTabClose = (path) => {
-    dispatch({ type: "REMOVE_TAB", payload: { path } });
-  };
+    const handleLogout = () => {
+        dispatch(resetTabs());
+        navigate('/');
+    };
 
-  return (
-    <div>
-      {tabs.map((tab) => (
-        <div key={tab.path}>
-          <button onClick={() => handleTabClick(tab.path)}>{tab.name}</button>
-          <button onClick={() => handleTabClose(tab.path)}>X</button>
+    return (
+        <div>
+            {tabs.map((tab, index) => (
+                <button key={index} onClick={() => handleTabClick(tab.url)}>
+                    {tab.name}
+                </button>
+            ))}
+            <button onClick={handleLogout}>Logout</button>
         </div>
-      ))}
-    </div>
-  );
-}
+    );
+};
 
-export default TabNavigation;
+export default Tabs;

@@ -1,41 +1,46 @@
+// SideMenu.js
 import React from 'react';
-import styled from "styled-components";
-import {NavLink} from "react-router-dom";
+import {Menu} from 'antd';
+import {useNavigate, Link} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
+import {addTab} from '../../store';
 
-const AsideSection = styled.div`
-    width: 240px;
-    border-right: 1px solid #cccccc;
-`;
+const SideMenu = () => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-function Aside() {
-    const asideData = [
+    const items = [
         {
-            title: "Main",
-            path: "/"
+            key: 'menu1',
+            label: <Link to="/main">Main</Link>,
+            title: 'main',
+            path: '/main',
         },
         {
-            title: "Page1",
-            path: "/page1"
+            key: 'menu2',
+            label: <Link to="/page1">Page1</Link>,
+            title: 'page1',
+            path: '/page1',
         },
         {
-            title: "Page2",
-            path: "/page2"
-        }
+            key: 'menu3',
+            label: <Link to="/page2">Page2</Link>,
+            title: 'page2',
+            path: '/page2',
+        },
     ]
+    const handleMenuClick = ({item}) => {
+        const url = item.props.path;
+        const name = item.props.title;
+
+        // 탭 정보 추가
+        dispatch(addTab({name, url}));
+        navigate(url);
+    };
 
     return (
-        <AsideSection>
-            <ul>
-                {
-                    asideData.map((item, index) => (
-                        <li key={`key-${index}`}>
-                            <NavLink to={item.path}>{item.title}</NavLink>
-                        </li>
-                    ))
-                }
-            </ul>
-        </AsideSection>
+        <Menu mode="vertical" onClick={handleMenuClick} items={items}/>
     );
-}
+};
 
-export default Aside;
+export default SideMenu;
