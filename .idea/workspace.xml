@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2dc013d-5bb3-4aa2-9a87-e7d7fde706de" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+    <list default="true" id="d2dc013d-5bb3-4aa2-9a87-e7d7fde706de" name="Changes" comment="Antd menu 사용, 메뉴 아이템의 props 를 특정하여 탭으로 전달">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Common/Aside.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Aside.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TabNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TabNavigation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,10 +88,23 @@
       <updated>1725459373861</updated>
       <workItem from="1725459375369" duration="1276000" />
     </task>
+    <task id="LOCAL-00001" summary="Antd menu 사용, 메뉴 아이템의 props 를 특정하여 탭으로 전달">
+      <option name="closed" value="true" />
+      <created>1726204961954</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726204961954</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Antd menu 사용, 메뉴 아이템의 props 를 특정하여 탭으로 전달" />
+    <option name="LAST_COMMIT_MESSAGE" value="Antd menu 사용, 메뉴 아이템의 props 를 특정하여 탭으로 전달" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

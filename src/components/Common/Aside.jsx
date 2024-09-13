@@ -12,9 +12,9 @@ const SideMenu = () => {
     const items = [
         {
             key: 'menu1',
-            label: <Link to="/main">Main</Link>,
+            label: <Link to="/">Main</Link>,
             title: 'main',
-            path: '/main',
+            path: '/',
         },
         {
             key: 'menu2',
@@ -29,13 +29,16 @@ const SideMenu = () => {
             path: '/page2',
         },
     ]
-    const handleMenuClick = ({item}) => {
-        const url = item.props.path;
-        const name = item.props.title;
+    const handleMenuClick = (e) => {
+        const selectedItem = items.find(item => item.key === e.key);
+        if (selectedItem) {
+            console.log(selectedItem.title);
+            const url = selectedItem.path;
+            const name = selectedItem.title;
 
-        // 탭 정보 추가
-        dispatch(addTab({name, url}));
-        navigate(url);
+            dispatch(addTab({name, url}));
+            navigate(url);
+        }
     };
 
     return (

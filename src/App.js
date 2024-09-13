@@ -12,7 +12,7 @@ const App = () => {
             <div style={{flex: 1}}>
                 <Tabs/>
                 <Routes>
-                    <Route path="/main" element={<Main/>}/>
+                    <Route path="/" element={<Main/>}/>
                     <Route path="/page1" element={<Page1/>}/>
                     <Route path="/page2" element={<Page2/>}/>
                 </Routes>
